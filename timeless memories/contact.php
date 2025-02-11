@@ -77,7 +77,7 @@
         }
 
         .info-section {
-            margin-top: 20px;
+            margin-top: 20px;=
             font-size: 1rem;
             color: #4b5563;
         }

@@ -66,18 +66,79 @@ $result = $conn->query($sql);
             color: #007bff;
             margin-bottom: 10px;
         }
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Navbar container */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f9f9f9;
+      padding: 15px 30px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    /* Logo */
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar .logo span {
+      color: #007bff;
+    }
+
+    /* Navbar links */
+    .navbar ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      color: #007bff;
+    }
+
+    /* Login Button */
+    .navbar ul li:last-child a {
+      font-weight: bold;
+      color: #333;
+    }
+
     </style>
 </head>
 <body>
-<header style="background-color: #333; padding: 15px 0; color: #fff; text-align: center;">
-    <h1 style="margin: 0; font-size: 32px;">Timeless Memories Photography</h1>
-    <nav style="margin-top: 10px;">
-        <a href="index.php" style="color: #ddd; text-decoration: none; margin: 0 15px;">Home</a>
-        <a href="gallery.php" style="color: #ddd; text-decoration: none; margin: 0 15px;">Gallery</a>
-        <a href="about.php" style="color: #ddd; text-decoration: none; margin: 0 15px;">About Us</a>
-        <a href="contact.php" style="color: #ddd; text-decoration: none; margin: 0 15px;">Contact</a>
-    </nav>
-</header>
+<nav class="navbar">
+    <div class="logo">Timeless <span>Memories</span></div>
+    <ul>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Experience</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Photographer</a></li>
+      <li><a href="#">LOGIN</a></li>
+    </ul>
+  </nav>
+  <br>
+  <br>
     <h2>Photographers</h2>
     
 
@@ -101,12 +162,10 @@ $result = $conn->query($sql);
     <?php $conn->close(); ?>
     <!-- Footer Section -->
 <footer style="background-color: #333; padding: 15px 0; color: #fff; text-align: center; margin-top: 40px;">
+    <br>
+    
     <p style="margin: 0;">© 2025 Timeless Memories Photography | All Rights Reserved</p>
-    <p style="margin: 5px 0;">Follow us on 
-        <a href="#" style="color: #ddd; text-decoration: none; margin: 0 5px;">Facebook</a> | 
-        <a href="#" style="color: #ddd; text-decoration: none; margin: 0 5px;">Instagram</a> | 
-        <a href="#" style="color: #ddd; text-decoration: none; margin: 0 5px;">Twitter</a>
-    </p>
+   
 </footer>
 </body>
 </html>
